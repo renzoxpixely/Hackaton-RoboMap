@@ -4,8 +4,10 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-md-12 col-lg-6 mt-3">
-    <div class="col-lg-12">
+  <div class="">
+    <!-- <div class="col-md-12 col-lg-6 mt-3"> -->
+    <div class="">
+      <!-- <div class="col-lg-12"> -->
       <agm-map  [latitude]="latAca" [longitude]="lngAca" [zoom]="zoom" (mapClick)="addMarker($event)" [scrollwheel]="null" [mapTypeControl]='true'>
 
           <agm-marker [markerDraggable]="true" (dragEnd)="dragMarker($event)" [latitude]="latAca" [longitude]="lngAca">
@@ -39,6 +41,34 @@
   </div>
    </div>
 
+
+   <div class="row row-cols-2">
+    <div class="col-md-10">
+      <label class="mt-3 fw-bold text-light" for="">Tipo de delito:</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>ROBO</option>
+        <option>ACOSO</option>
+        <option>ESTAFA</option>
+        <option>HOMICIDIO</option>
+        <option>LESIONES</option>
+        <option>SECUESTRO</option>
+        <option>VIOLACIÓN</option>
+      </select>
+    </div>
+   
+    <h2>Basic mat-select Example</h2>
+    <mat-form-field>
+      <mat-label>Your Team</mat-label>
+      <mat-select [(ngModel)]="selectedItem">
+        <mat-option *ngFor="let team of teams" [value]="team.name">
+          {{team.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <h3>Your Team is: {{selectedItem}}</h3>
+
+
    </div>
 
  
@@ -48,7 +78,7 @@
     <label class="mt-2 fw-bold text-light" for=""> Latitud:  </label><span class="fw-bold text-light"> {{latAca}}</span>
     <br>
     <label class="mt-2 fw-bold text-light" for=""> Longitud: </label><span class="fw-bold text-light"> {{lngAca}}</span>
-
+    
    <br>
 
   </div>

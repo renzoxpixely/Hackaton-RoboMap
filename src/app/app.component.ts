@@ -9,6 +9,20 @@ import { Location } from "./models/location";
 })
 export class AppComponent implements OnInit {
 
+
+  teams: any[] = [
+    { name: 'ROBO' },
+    { name: 'ACOSO' },
+    { name: 'ESTAFA' },
+    { name: 'HOMICIDIO' },
+    { name: 'LESIONES' },
+    { name: 'SECUESTRO' },
+    { name: 'VIOLACIÓN' },
+];
+
+    selectedItem: string;
+
+
   public latAca = -12.0453
   public lngAca =-77.0311
   public zoom =11;
