@@ -44,29 +44,21 @@
 
    <div class="row row-cols-2">
     <div class="col-md-10">
-      <label class="mt-3 fw-bold text-light" for="">Tipo de delito:</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>ROBO</option>
-        <option>ACOSO</option>
-        <option>ESTAFA</option>
-        <option>HOMICIDIO</option>
-        <option>LESIONES</option>
-        <option>SECUESTRO</option>
-        <option>VIOLACIÓN</option>
-      </select>
+      <label class="mt-3 fw-bold text-light" for="">Tipo de delito: </label>
+      <mat-form-field>
+        <mat-label class="mt-3 fw-bold text-light"> Delito</mat-label>
+        <mat-select [(ngModel)]="selectedItem">
+          <mat-option *ngFor="let team of teams" [value]="team.name">
+            {{team.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
     </div>
    
-    <h2>Basic mat-select Example</h2>
-    <mat-form-field>
-      <mat-label>Your Team</mat-label>
-      <mat-select [(ngModel)]="selectedItem">
-        <mat-option *ngFor="let team of teams" [value]="team.name">
-          {{team.name}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+   
     
-    <h3>Your Team is: {{selectedItem}}</h3>
+    <h3 class="mt-3 fw-bold text-light">El delito es: {{selectedItem}}</h3>
 
 
    </div>
@@ -78,6 +70,9 @@
     <label class="mt-2 fw-bold text-light" for=""> Latitud:  </label><span class="fw-bold text-light"> {{latAca}}</span>
     <br>
     <label class="mt-2 fw-bold text-light" for=""> Longitud: </label><span class="fw-bold text-light"> {{lngAca}}</span>
+    <br>
+    <label class="mt-2 fw-bold text-light" for=""> Longitud: </label><span class="fw-bold text-light"> {{selectedItem}}</span>
+
     
    <br>
 
@@ -93,6 +88,7 @@
           <th scope="col">Dirección</th>
           <th scope="col">Latitud</th>
           <th scope="col">Longitud</th>
+          <th scope="col">Delito</th>
           <th scope="col">Opciones</th>
         </tr>
       </thead>
@@ -102,6 +98,7 @@
          <td style="max-width: 150px;" class="">{{item.address}}</td>
          <td>{{item.latitud}}</td>
          <td>{{item.longtiud}}</td>
+         <td>{{item.delito}}</td>
          <td > <button type="button" (click)="deleteLocation(item)" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
           <button type="button" (click)="selectLocation(item)" class="ms-2 btn btn-primary"><i class="bi bi-arrow-up"></i></button>
                 

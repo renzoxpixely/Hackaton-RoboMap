@@ -10,7 +10,7 @@ import { Location } from "./models/location";
 export class AppComponent implements OnInit {
 
 
-  teams: any[] = [
+ public teams: any[] = [
     { name: 'ROBO' },
     { name: 'ACOSO' },
     { name: 'ESTAFA' },
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
     { name: 'VIOLACIÓN' },
 ];
 
-    selectedItem: string;
+  public selectedItem: string;
 
 
   public latAca = -12.0453
@@ -117,7 +117,8 @@ addLocation(){
   this.locationService.addLocation({
     address: this.address,
     latitud: this.latAca,
-    longtiud: this.lngAca
+    longtiud: this.lngAca,
+    delito: this.selectedItem
   });
 
   this.locations = this.locationService.getLocations();
