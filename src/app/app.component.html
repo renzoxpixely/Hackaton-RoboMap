@@ -1,32 +1,31 @@
 <div class="container">
   <h1 class="text-light mt-5">{{title}}</h1>
-  <h1>asdfasfasdf</h1>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" routerLink="">Angular Routing</a>
-    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+
+
+
+  <div class="buttons">
+    <a href="#" routerLink="/">
+        <button class="btn btn-fill btn-neutral">
+        Inicio
+        </button>
+    </a>
+    <a href="#" routerLink="/comunicate">
+        <button class="btn btn-fill btn-neutral">
+        Comunicarse con serenazgo
+        </button>
+    </a>
+    <a href="#" routerLink="/admin">
+        <button class="btn btn-fill btn-neutral">
+        Panel de administrador
+        </button>
+    </a>
+</div>
+
   
-    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="mapa" routerLinkActive="active">Mapa</a>
-        </li>
-
-      </ul>
-    </div>
-  </nav>
-  
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-
-
+  <router-outlet></router-outlet>
 
 
 </div>
@@ -65,19 +64,30 @@
     <div class="col-md-10">
       <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Busca una locación" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
     </div>
+
+
+
   <div class="col-md-2">
     <button type="button" (click)="addLocation()" class="btn btn-light">Agregar</button>
   </div>
+
+  <label class="mt-3 fw-bold text-light" for="">Ingrese DNI o vacío(anónimo):</label>
+  <div class="row row-cols-2">
+   <div class="col-md-10">
+     <input type="text" class="form-control"  placeholder="Ingrese DNI o vacío(anónimo)"  type="text">
+   </div>
+  </div>
+
    </div>
 
-
+   
    <div class="row row-cols-2">
     <div class="col-md-10">
       <label class="mt-3 fw-bold text-light" for="">Tipo de delito: </label>
-      <mat-form-field>
+      <mat-form-field class="mt-3 fw-bold text-light">
         <mat-label class="mt-3 fw-bold text-light"> Delito</mat-label>
         <mat-select [(ngModel)]="selectedItem">
-          <mat-option *ngFor="let team of teams" [value]="team.name">
+          <mat-option  *ngFor="let team of teams" [value]="team.name">
             {{team.name}}
           </mat-option>
         </mat-select>
@@ -86,7 +96,7 @@
     </div>
    
    
-    
+    <hr>
     <h3 class="mt-3 fw-bold text-light">El delito es: {{selectedItem}}</h3>
 
 
@@ -99,8 +109,7 @@
     <label class="mt-2 fw-bold text-light" for=""> Latitud:  </label><span class="fw-bold text-light"> {{latAca}}</span>
     <br>
     <label class="mt-2 fw-bold text-light" for=""> Longitud: </label><span class="fw-bold text-light"> {{lngAca}}</span>
-    <br>
-    <label class="mt-2 fw-bold text-light" for=""> Longitud: </label><span class="fw-bold text-light"> {{selectedItem}}</span>
+    
 
     
    <br>
@@ -108,7 +117,7 @@
   </div>
   
   
-
+  <hr>
   <div class="mt-3 col-md-12 col-lg-6">
     <table class="table table-responsive table-bordered table-primary  text-dark">
       <thead class="text-center">
@@ -137,8 +146,6 @@
       </tbody>
     </table>
   </div>
- </div>
-
 </div>
 
 </div>

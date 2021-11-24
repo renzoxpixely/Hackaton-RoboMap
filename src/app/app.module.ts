@@ -9,9 +9,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MapaComponent } from './mapa/mapa.component';
+import { ComunicateComponent } from './comunicate/comunicate.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapaComponent,
+    ComunicateComponent
   ],
   imports: [
     BrowserModule,
