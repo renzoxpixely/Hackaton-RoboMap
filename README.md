@@ -9,9 +9,9 @@ La Hackathon Lima Segura, consiste en establecer un espacio de participación en
 
 URL: https://angular-con-google-maps.vercel.app/
 
-![alt text](https://github.com/renzoxpixely/Hackaton-RoboMap/src/assets/robomap.gif?raw=true)
+![alt text](https://github.com/renzoxpixely/Hackaton-RoboMap/blob/master/src/assets/robomap.gif?raw=true)
 
-![Alt Text](https://github.com/renzoxpixely/Hackaton-RoboMap/src/assets/robomap.gif)
+![Alt Text](https://github.com/renzoxpixely/Hackaton-RoboMap/blob/master/src/assets/robomap.gif)
 
 ## Run local
 
