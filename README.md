@@ -1,13 +1,22 @@
-# AngularMaps
+# RoboMAp
+## AngularMaps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 
-Presentación: https://www.youtube.com/watch?v=AWWdp11Beuc
+Presentación: 
+La Hackathon Lima Segura, consiste en establecer un espacio de participación entre innovadores tecnológicos y autoridades públicas de la Municipalidad de Lima, donde se promueva el trabajo colaborativo y de desarrollo bajo el concepto de Ciudad Inteligente de manera que se fomente la implementación de soluciones.
+
 
 URL: https://angular-con-google-maps.vercel.app/
-![image](https://user-images.githubusercontent.com/88822515/141681289-4ad4d69b-e0bc-4be0-b09f-066644439572.png)
 
+![alt text](https://github.com/renzoxpixely/Hackaton-RoboMap/src/assets/robomap.gif?raw=true)
 
+![Alt Text](https://github.com/renzoxpixely/Hackaton-RoboMap/src/assets/robomap.gif)
+
+## Run local
+
+npm install
+npm start
 
 ## Development server
 
@@ -32,3 +41,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
